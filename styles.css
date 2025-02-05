@@ -1,3 +1,5 @@
+/* styling for the body */
+
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
@@ -6,17 +8,21 @@ body {
     background-color: #f0f0f0;
 }
 
+/* styling for the main headings */
 h1,
 h2 {
     color: #333;
 }
 
+/* styling for the buttons */
 button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
+
+    /* allows buttons to sit next together */
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
@@ -24,10 +30,12 @@ button {
     border-radius: 4px;
 }
 
+/* changes button cover on hover. Just to give contrast when the cursor moves on to the button */
 button:hover {
     background-color: #45a049;
 }
 
+/* styling for the story display area */
 #story {
     background-color: #fff;
     border: 1px solid #ddd;
