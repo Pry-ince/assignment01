@@ -2,14 +2,14 @@
 
 /* Variables
 -------------------------------------------------- */
-// Constants for main button query selectors
+// Constants for main button query selectors. it gets the button elements for each item.
 const noun1Button = document.getElementById('noun1');
 const verbButton = document.getElementById('verb');
 const adjectiveButton = document.getElementById('adjective');
 const noun2Button = document.getElementById('noun2');
 const settingButton = document.getElementById('setting');
 
-// Constants for p tag to display query selectors
+// Constants for p tag to display query selectors. Gets the paragraph element
 const choosenNoun1 = document.getElementById('choosenNoun1');
 const choosenVerb = document.getElementById('choosenVerb');
 const choosenAdjective = document.getElementById('choosenAdjective');
@@ -28,7 +28,7 @@ const adjectives = ['a funny', 'a scary', 'a goofy', 'a slimy', 'a barking', "a 
 const nouns2 = ['goat', 'monkey', 'fish', 'cow', 'frog', "bug", "worm"];
 const settings = ['on the moon', 'on the chair', 'in my spaghetti', 'in my soup', 'on the grass', "in my shoes"];
 
-// Variables for count to grab array elements
+// Variables for count to grab array elements. It just initializes the counters
 let noun1Count = 0, verbCount = 0, adjectiveCount = 0, noun2Count = 0, settingCount = 0;
 
 /* Functions
@@ -101,6 +101,8 @@ function setting_on_click() {
 // concatenate the user story and display
 function playback_on_click() {
     const story = `${choosenNoun1.textContent} ${choosenVerb.textContent} ${choosenAdjective.textContent} ${choosenNoun2.textContent} ${choosenSetting.textContent}.`;
+
+    //displays the concatenated words.
     storyParagraph.textContent = story;
 }
 
@@ -110,12 +112,12 @@ function random_on_click() {
     storyParagraph.textContent = randomStory;
 }
 
-// Function to set student info (student ID/name) dynamically
+// Function to set student info (student ID/name). I would say statically for now.
 function student_info_on_click() {
     document.getElementById('studentId').textContent = 'Student Name: Prince Pun (200589230)';
 }
 
-/* Event Listeners
+/* Event Listeners for the buttons
 -------------------------------------------------- */
 noun1Button.addEventListener('click', noun1_on_click);
 verbButton.addEventListener('click', verb_on_click);
@@ -125,6 +127,6 @@ settingButton.addEventListener('click', setting_on_click);
 playbackButton.addEventListener('click', playback_on_click);
 randomButton.addEventListener('click', random_on_click);
 
-// New button for showing student info
+// New button for showing student info with event listener on click
 const studentInfoButton = document.getElementById('showStudentInfo');
 studentInfoButton.addEventListener('click', student_info_on_click);
